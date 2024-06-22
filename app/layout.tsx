@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { siteConfig } from '@/config/site'
+import { Analytics } from '@vercel/analytics/react'
+import GoogleAnalytics from './GoogleAnalytics'
 
 export const metadata: Metadata = {
   title: siteConfig.name,
@@ -26,6 +28,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>{children}</body>
+
+      {process.env.NODE_ENV === 'development' ? (
+        <></>
+      ) : (
+        <>
+          <Analytics />
+          <GoogleAnalytics />
+        </>
+      )}
     </html>
   )
 }
