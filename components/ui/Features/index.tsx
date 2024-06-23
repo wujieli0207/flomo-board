@@ -64,7 +64,7 @@ const Features = () => {
   ]
 
   return (
-    <SectionWrapper>
+    <SectionWrapper className="px-16 lg:px-56">
       <div id="features" className="custom-screen text-gray-600">
         <ul className="grid gap-x-12 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((item, idx) => (
