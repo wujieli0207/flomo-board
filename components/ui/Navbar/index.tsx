@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import Brand from '../Brand'
-import NavLink from '../NavLink'
+import { Button } from '../button'
 
 const Navbar = () => {
   const [state, setState] = useState(false)
@@ -90,12 +90,9 @@ const Navbar = () => {
               )
             })} */}
             <li>
-              <NavLink
-                href="/"
-                className="block font-medium text-sm text-white bg-gray-800 hover:bg-gray-600 active:bg-gray-900 md:inline"
-              >
-                Coming soon
-              </NavLink>
+              <Link href="/login" passHref>
+                <Button>开始</Button>
+              </Link>
             </li>
           </ul>
         </div>

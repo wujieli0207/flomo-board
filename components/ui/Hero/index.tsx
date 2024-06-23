@@ -1,4 +1,6 @@
+import Link from 'next/link'
 import NavLink from '../NavLink'
+import { Button } from '../button'
 
 const Hero = () => (
   <section>
@@ -11,12 +13,9 @@ const Hero = () => (
           在白板上整理、展示你的 flomo 笔记，多一维度的思考
         </p>
         <div className="flex items-center justify-center gap-x-3 font-medium text-sm">
-          <NavLink
-            href="/"
-            className="text-white bg-gray-800 hover:bg-gray-600 active:bg-gray-900 "
-          >
-            Coming soon
-          </NavLink>
+          <Link href="/login" passHref>
+            <Button>开始使用</Button>
+          </Link>
           {/* <NavLink
             href="#cta"
             className="text-gray-700 border hover:bg-gray-50"
