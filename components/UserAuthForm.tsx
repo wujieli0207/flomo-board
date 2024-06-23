@@ -57,7 +57,10 @@ export function UserAuthForm({ className, ...props }: IUserAuthFormProps) {
       const result = await response.json()
 
       if (response.ok) {
-        const useInfo = result.data as IUserInfo
+        const { data } = result
+        const useInfo = data.userInfo as IUserInfo
+        console.log('data.indexedDBData: ', data.indexedDBData)
+
         await localforageInstance.set<IUserInfo>(FLOMO_USER_INFO_KEY, useInfo)
         router.push(BOARD_ROUTE)
       } else {
