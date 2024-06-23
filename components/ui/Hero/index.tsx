@@ -13,8 +13,8 @@ const Hero = () => (
           在白板上整理、展示你的 flomo 笔记，多一维度的思考
         </p>
         <div className="flex items-center justify-center gap-x-3 font-medium text-sm">
-          <Link href="/login" passHref>
-            <Button>开始使用</Button>
+          <Link href="/" passHref>
+            <Button>Comming soon</Button>
           </Link>
           {/* <NavLink
             href="#cta"

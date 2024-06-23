@@ -90,8 +90,8 @@ const Navbar = () => {
               )
             })} */}
             <li>
-              <Link href="/login" passHref>
-                <Button>开始</Button>
+              <Link href="/" passHref>
+                <Button>Comming soon</Button>
               </Link>
             </li>
           </ul>
